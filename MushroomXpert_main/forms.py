@@ -1,9 +1,9 @@
 from django import forms
 
-from MushroomXpert_main.models import Mushroom
+from MushroomXpert_main.models import FindMushroom
 
 
 class MushroomForm(forms.ModelForm):
     class Meta:
-        model = Mushroom
+        model = FindMushroom
         fields = ('image',)
