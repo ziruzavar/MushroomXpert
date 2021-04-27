@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.views.generic import ListView
 from django.views.generic.base import View, TemplateView
 
@@ -26,7 +26,7 @@ class IndexView(View):
             print(index)
             context = {'first': labels[str(index[0])], 'index': index[0]}
             f.close()
-            return render(request, 'index.html', context)
+            return redirect(f'/?shroom={context["first"]}')
         else:
             form = MushroomForm()
             return render(request, 'index.html', {'form': form})

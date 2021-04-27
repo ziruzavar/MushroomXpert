@@ -1,42 +1,38 @@
 {% extends 'common/base.html' %}
 {% load static %}
-{% block content%}
-      <section >
-         <div id="main_slider" class="carousel slide banner-main" data-ride="carousel">
-            <ol class="carousel-indicators">
-               <li data-target="#main_slider" data-slide-to="0" class="active"></li>
-               <li data-target="#main_slider" data-slide-to="1"></li>
-               <li data-target="#main_slider" data-slide-to="2"></li>
-            </ol>
+{% block content %}
+    <section>
+        <div id="main_slider" class="carousel slide banner-main" data-ride="carousel">
             <div class="carousel-inner">
-               <div class="carousel-item active">
-                  <div class="container">
-                     <div class="row marginii">
-                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
-                           <div class="carousel-caption ">
-                              <h1>Mushroom AI<strong class="color"></strong></h1>
-                              <p>Upload a mushroom. Our software will tell you what it is and will give you a detailed information about it. We have success rate of over 95%.</p>
-                              <form class="form-detail" method="post" enctype="multipart/form-data">
-                                  {% csrf_token %}
-                                  <label for="picture" >Upload a picture</label>
-                                  {{ form }}
-                                  <input type="submit" class="btn-primary" value="Upload">
-                              </form>
-                               <p>{{ first }}</p>
-                               <p>{{ index }}</p>
-                           </div>
+                <div class="carousel-item active">
+                    <div class="container">
+                        <div class="row marginii">
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                                <div class="carousel-caption ">
+                                    <h1>Mushroom AI<strong class="color"></strong></h1>
+                                    <p>Upload a mushroom. Our software will tell you what it is and will give you a
+                                        detailed information about it. We have success rate of over 95%.</p>
+                                    <form class="form-detail" method="post" enctype="multipart/form-data">
+                                        {% csrf_token %}
+                                        <label for="picture">Upload a picture</label>
+                                        {{ form }}
+                                        <input type="submit" class="btn-primary" value="Upload">
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                                <div class="img-box" id="static">
+                                    <figure><img alt="img"
+                                                 src="https://anotherimg-dazedgroup.netdna-ssl.com/900/azure/another-prod/320/9/329019.jpg"/>
+                                    </figure>
+                                </div>
+                                <div class="container plants" id="prediction"></div>
+                            </div>
                         </div>
-                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
-                           <div class="img-box">
-                              <figure><img alt="img"/></figure>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
+                    </div>
+                </div>
             </div>
-         </div>
-      </section>
-      <!-- plant -->
-      <!-- end plant -->
+        </div>
+    </section>
+    <script src="{% static 'js/index.js' %}" type="module"></script>
 {% endblock %}
