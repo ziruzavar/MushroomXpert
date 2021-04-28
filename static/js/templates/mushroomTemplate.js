@@ -23,7 +23,7 @@ export function mushroomTemplate(data) {
         ${data.map((mushroom) => html`
             <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
             <div class="plants-box">
-                <figure><img src="${mushroom["image_url"]}" alt="img"/></figure>
+                <figure><img src="${mushroom["image_url"]}" alt="img" class="mushroom-img"/></figure>
                 <h3>${mushroom.name}</h3>
                 <p>${mushroom["edible_choices"]}</p>
                 <a href="/details/${mushroom.name}" class="btn btn-success">See More</a>

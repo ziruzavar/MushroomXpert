@@ -482,11 +482,20 @@ nav.main-menu {
 .main-menu ul > li:nth-child(6) {
     padding-right: 0px;
 }
-
+.welcome {
+    font-family: sans-serif;
+}
+.mushroom-img {
+    width: 350px;
+    height: 200px;
+}
 .pagination {
     margin: auto;
     width: 50%;
     padding: 10px;
+}
+.card-body {
+    border: 3px solid darkgreen;
 }
 
 .pagination a {

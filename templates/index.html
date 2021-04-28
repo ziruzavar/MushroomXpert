@@ -9,15 +9,20 @@
                         <div class="row marginii">
                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                                 <div class="carousel-caption ">
-                                    <h1>Mushroom AI<strong class="color"></strong></h1>
-                                    <p>Upload a mushroom. Our software will tell you what it is and will give you a
-                                        detailed information about it. We have success rate of over 95%.</p>
-                                    <form class="form-detail" method="post" enctype="multipart/form-data">
-                                        {% csrf_token %}
-                                        <label for="picture">Upload a picture</label>
-                                        {{ form }}
-                                        <input type="submit" class="btn-primary" value="Upload">
-                                    </form>
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h1 class="welcome">Mushroom AI</h1>
+                                            <p class="welcome">Upload a mushroom. Our software will tell you what it is and will give
+                                                you a
+                                                detailed information about it. We have success rate of over 95%.</p>
+                                            <form class="form-detail" method="post" enctype="multipart/form-data">
+                                                {% csrf_token %}
+                                                <label for="picture">Upload a picture</label>
+                                                {{ form }}
+                                                <input type="submit" class="btn-primary" value="Upload">
+                                            </form>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
