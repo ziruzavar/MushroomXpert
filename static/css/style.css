@@ -469,6 +469,10 @@ nav.main-menu {
     padding-right: 0px;
 }
 
+.h1, .h3 {
+    color: black;
+}
+
 .main-menu ul > li {
     position: inherit;
     display: inline-block;
@@ -479,7 +483,12 @@ nav.main-menu {
     padding-right: 0px;
 }
 
-/* Pagination links */
+.pagination {
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+}
+
 .pagination a {
     font-size: 30px;
     color: black;
