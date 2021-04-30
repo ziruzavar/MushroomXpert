@@ -11,9 +11,7 @@ async function setup() {
     if (shroom[1] && shroom[0] === "?shroom") {
         main.style.display = "block"
         staticPng.style.display = "none"
-
-        const data = shroom[1].split("_")
-        const mushroom = await getMush(data[1] + "_" + data[2])
+        const mushroom = await getMush(shroom[1])
         render(detailsTemplate(mushroom), main)
     } else {
         main.style.display = "none"
