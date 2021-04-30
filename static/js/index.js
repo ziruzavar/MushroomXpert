@@ -8,7 +8,7 @@ const staticPng = document.getElementById("static")
 setup()
 
 async function setup() {
-    if (shroom[1] && shroom[0] === "shroom") {
+    if (shroom[1] && shroom[0] === "?shroom") {
         main.style.display = "block"
         staticPng.style.display = "none"
 
